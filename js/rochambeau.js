@@ -11,7 +11,7 @@ function getComputerChoice() {
         return "scissors"
     }
 }
-
+//Displays outcomes depending on the player's choice
 function playRound(playerSelection, computerSelection) {
     if(playerSelection === "rock" && computerSelection === "paper") {
         alert("You lose! Paper beats Rock!");
@@ -40,4 +40,8 @@ function playRound(playerSelection, computerSelection) {
     else if(playerSelection === "scissors" && computerSelection === "scissors") {
         alert("Tie!")
     }
+}
+
+function game() {
+
 }
