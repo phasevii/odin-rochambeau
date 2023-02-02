@@ -13,37 +13,37 @@ function getComputerChoice() {
 }
 //Displays outcomes depending on the player's choice
 function playRound(playerSelection, computerSelection) {
-    if(playerSelection === "rock" && computerSelection === "paper") {
+    if(playerSelection.toLowerCase() === "rock" && computerSelection.toLowerCase() === "paper") {
         alert("You lose! Paper beats Rock!");
     }
-    else if(playerSelection === "rock" && computerSelection === "scissors") {
+    else if(playerSelection.toLowerCase() === "rock" && computerSelection.toLowerCase() === "scissors") {
         alert("You win! Rock beats Scissors!");
     }
-    else if(playerSelection === "rock" && computerSelection === "rock") {
+    else if(playerSelection.toLowerCase() === "rock" && computerSelection.toLowerCase() === "rock") {
         alert("Tie!");
     }
-    else if(playerSelection === "paper" && computerSelection === "scissors") {
+    else if(playerSelection.toLowerCase() === "paper" && computerSelection.toLowerCase() === "scissors") {
         alert("You lose! Scissors beat Paper!");
     }
-    else if(playerSelection === "paper" && computerSelection === "rock") {
+    else if(playerSelection.toLowerCase() === "paper" && computerSelection.toLowerCase() === "rock") {
         alert("You win! Paper beats Rock!");
     }
-    else if(playerSelection === "paper" && computerSelection === "paper") {
+    else if(playerSelection.toLowerCase() === "paper" && computerSelection.toLowerCase() === "paper") {
         alert("Tie!")
     }
-    else if(playerSelection === "scissors" && computerSelection === "rock") {
+    else if(playerSelection.toLowerCase() === "scissors" && computerSelection.toLowerCase() === "rock") {
         alert("You lose! Rock beats Scissors!");
     }
-    else if(playerSelection === "scissors" && computerSelection === "paper") {
+    else if(playerSelection.toLowerCase() === "scissors" && computerSelection.toLowerCase() === "paper") {
         alert("You win! Scissors beat Paper!")
     }
-    else if(playerSelection === "scissors" && computerSelection === "scissors") {
+    else if(playerSelection.toLowerCase() === "scissors" && computerSelection.toLowerCase() === "scissors") {
         alert("Tie!")
     }
 }
 
 function game() {
     for(let i = 0; i < 5; i++) {
-        playRound(prompt("Rock, Paper, Scissors, Shoot!").toLowerCase(),getComputerChoice())
+        playRound(prompt("Rock, Paper, Scissors, Shoot!"),getComputerChoice())
     }
 }
