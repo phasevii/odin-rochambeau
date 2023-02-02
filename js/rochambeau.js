@@ -14,37 +14,39 @@ function getComputerChoice() {
 //Displays outcomes depending on the player's choice
 function playRound(playerSelection, computerSelection) {
     if(playerSelection.toLowerCase() === "rock" && computerSelection.toLowerCase() === "paper") {
-        alert("You lose! Paper beats Rock!");
+        return "You lose! Paper beats Rock!";
     }
     else if(playerSelection.toLowerCase() === "rock" && computerSelection.toLowerCase() === "scissors") {
-        alert("You win! Rock beats Scissors!");
+        return "You win! Rock beats Scissors!";
     }
     else if(playerSelection.toLowerCase() === "rock" && computerSelection.toLowerCase() === "rock") {
-        alert("Tie!");
+        return "Tie!";
     }
     else if(playerSelection.toLowerCase() === "paper" && computerSelection.toLowerCase() === "scissors") {
-        alert("You lose! Scissors beat Paper!");
+        return "You lose! Scissors beat Paper!";
     }
     else if(playerSelection.toLowerCase() === "paper" && computerSelection.toLowerCase() === "rock") {
-        alert("You win! Paper beats Rock!");
+        return "You win! Paper beats Rock!";
     }
     else if(playerSelection.toLowerCase() === "paper" && computerSelection.toLowerCase() === "paper") {
-        alert("Tie!")
+        return "Tie!";
     }
     else if(playerSelection.toLowerCase() === "scissors" && computerSelection.toLowerCase() === "rock") {
-        alert("You lose! Rock beats Scissors!");
+        return "You lose! Rock beats Scissors!";
     }
     else if(playerSelection.toLowerCase() === "scissors" && computerSelection.toLowerCase() === "paper") {
-        alert("You win! Scissors beat Paper!")
+        return "You win! Scissors beat Paper!";
     }
     else if(playerSelection.toLowerCase() === "scissors" && computerSelection.toLowerCase() === "scissors") {
-        alert("Tie!")
+        return "Tie!";
     }
 }
 
 function game() {
     for(let i = 0; i < 5; i++) {
-        let playerSelection = Window.prompt("Rock, Paper, Scissors, Shoot!")
-        playRound(playerSelection,getComputerChoice())
+        let playerSelection = Window.prompt("Rock, Paper, Scissors, Shoot!");
+        return playRound(playerSelection,getComputerChoice())
     }
 }
+
+console.log(game())
