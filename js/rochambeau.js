@@ -44,6 +44,7 @@ function playRound(playerSelection, computerSelection) {
 
 function game() {
     for(let i = 0; i < 5; i++) {
-        playRound(prompt("Rock, Paper, Scissors, Shoot!"),getComputerChoice())
+        let playerSelection = Window.prompt("Rock, Paper, Scissors, Shoot!")
+        playRound(playerSelection,getComputerChoice())
     }
 }
