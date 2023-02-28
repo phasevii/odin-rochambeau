@@ -40,6 +40,9 @@ function playRound(playerSelection, computerSelection) {
     else if(playerSelection.toLowerCase() === "scissors" && computerSelection.toLowerCase() === "scissors") {
         return "Tie!";
     }
+    else {
+        return "Please choose Rock, Paper, or Scissors!"
+    }
 }
 
 function game() {
